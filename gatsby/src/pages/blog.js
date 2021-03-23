@@ -17,6 +17,7 @@ const BlogPageStyles = styled.div`
     display: grid;
     grid-template-rows: auto;
     gap: 20px;
+    margin-bottom: 20px;
   }
 
   .article-card {
@@ -47,7 +48,7 @@ export default function Blog({ data }) {
         </Fade>
         <div className="posts-grid">
           {posts.map(post => (
-            <Fade bottom key={`fade-${post.id}`}>
+            <Fade left key={`fade-${post.id}`}>
               <article key={post.id}>
                 <div className="article-card">
                   <Link to={`/blog${post.fields.slug}`} >

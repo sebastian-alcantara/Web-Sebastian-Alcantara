@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "Sebastian Alcantara",
     author: "Sebastián Alcántara",
-    description: "Hola!"
+    greeting: "Hi, I'm",
+    description: "Web developer"
   },
   plugins: [
     "gatsby-plugin-styled-components",

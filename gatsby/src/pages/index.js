@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
+import Typewriter from "../components/Typewriter";
 
 const HomePageStyles = styled.div`
   max-width: 800px;
@@ -19,12 +20,14 @@ const HomePageStyles = styled.div`
     align-items: center;
     text-align: center;
 
-    h1 {
+    .greeting-name {
       align-self: end;
     }
 
     p {
+      justify-self: left;
       align-self: start;
+      text-align: left;
     }
   }
 
@@ -40,17 +43,20 @@ const HomePageStyles = styled.div`
 `;
 
 export default function Home({ data }) {
-  const { title, description } = data.site.siteMetadata;
+  const { title, description, greeting } = data.site.siteMetadata;
 
   return (
     <>
       <HomePageStyles>
         <div className="first-impression">
           <Bounce left>
-            <h1 className="page-title">{title}</h1>
+            <div className="greeting-name">
+              <h1 className="page-title">{greeting}</h1>
+              <h1 className="page-title">{title}</h1>
+            </div>
           </Bounce>
           <Bounce left>
-            <p>{description}</p>
+            <Typewriter />
           </Bounce>
           <Bounce up>
             <div>
@@ -72,6 +78,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        greeting
         description
       }
     }

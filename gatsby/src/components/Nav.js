@@ -70,7 +70,7 @@ const NavStyles = styled.nav`
     width: 15rem;
     background-color: transparent;
     line-height: 6rem;
-    //-webkit-tap-highlight-color: var(--color_7);
+    -webkit-tap-highlight-color: transparent;
     //padding-top: 1rem;
     //padding-bottom: 1rem;
     //border-radius: 3px;
