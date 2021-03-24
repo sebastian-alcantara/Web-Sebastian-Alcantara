@@ -8,11 +8,6 @@ export default function Typewriter() {
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
 
-  console.log("index: ", index);
-  console.log("subIndex: ", subIndex);
-  console.log("reverse: ", reverse);
-
-
   // typeWriter
   useEffect(() => {
     //if (index === words.length) return;

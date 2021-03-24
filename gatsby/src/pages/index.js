@@ -70,11 +70,17 @@ const HomePageStyles = styled.div`
 
 export default function Home({ data }) {
   const { title, description, greeting } = data.site.siteMetadata;
+  const firstSectionRef = useRef();
+  const secondSectionRef = useRef();
+
+  function handleNextClick() {
+    secondSectionRef.current.scrollIntoView({ behavior: "smooth" })
+  }
 
   return (
     <>
       <HomePageStyles>
-        <section className="first-impression">
+        <section className="first-impression" ref={firstSectionRef}>
           <Bounce left>
             <div className="greeting-name">
               <h1 className="page-title">{greeting}</h1>
@@ -85,16 +91,16 @@ export default function Home({ data }) {
             <Typewriter />
           </Bounce>
           <Bounce up>
-            <button className="section-scroll-button">
+            <button className="section-scroll-button" onClick={handleNextClick}>
               &#8595;
             </button>
           </Bounce>
         </section>
-        <section className="second-section">
+        <section className="second-section" ref={secondSectionRef}>
           <div style={{width: "50vw"}}>
             <StaticImage src="../images/web-developer-doge.jpg" alt="A web dev Doge" />
           </div>
-            <button className="section-scroll-button">
+            <button className="section-scroll-button" onClick={handleNextClick}>
               &#8595;
             </button>
         </section>
