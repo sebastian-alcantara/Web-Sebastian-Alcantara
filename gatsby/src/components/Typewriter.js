@@ -8,30 +8,50 @@ export default function Typewriter() {
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
 
+  console.log("index: ", index);
+  console.log("subIndex: ", subIndex);
+  console.log("reverse: ", reverse);
+
+
   // typeWriter
   useEffect(() => {
     //if (index === words.length) return;
-
-    if (index === words.length) {
-      setIndex(0);
-      setReverse(true);
-    }
-
+    /*
     if ( subIndex === words[index].length + 1 && 
         index !== words.length - 1 && !reverse ) {
       setReverse(true);
       return;
     }
+    */
+    if ( subIndex === words[index].length + 1 && !reverse ) {
+      setReverse(true);
+      return;
+    }
 
+    /*
     if (subIndex === 0 && reverse) {
       setReverse(false);
       setIndex((prev) => prev + 1);
       return;
     }
+    */
+
+    if (subIndex === 0 && reverse) {
+      if (index >= words.length -1) {
+        setReverse(false);
+        setIndex(0);
+        return;
+      }
+      else {
+        setReverse(false);
+        setIndex((prev) => prev + 1);
+        return;
+      }
+    }
 
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 :
+    }, Math.max(reverse ? 100 : subIndex === words[index].length ? 1000 :
                 150, parseInt(Math.random() * 350)));
 
     return () => clearTimeout(timeout);
@@ -48,7 +68,7 @@ export default function Typewriter() {
   return (
     <>
       <p>
-        {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
+        {`→ ${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
       </p>
     </>
   );

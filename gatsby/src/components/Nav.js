@@ -38,7 +38,7 @@ const NavStyles = styled.nav`
 
   .menu-ul {
     z-index: 10;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
     list-style: none;
@@ -48,7 +48,7 @@ const NavStyles = styled.nav`
     grid-template-columns: auto auto auto auto;
 
     grid-template-rows: auto;
-    gap: 0;
+    gap: 10rem;
 
     //margin-top: -6rem;
 
@@ -67,7 +67,7 @@ const NavStyles = styled.nav`
     font-weight: 500;
     text-decoration: none;
     display: block;
-    width: 15rem;
+    //width: 15rem;
     background-color: transparent;
     line-height: 6rem;
     -webkit-tap-highlight-color: transparent;
@@ -76,9 +76,9 @@ const NavStyles = styled.nav`
     //border-radius: 3px;
 
     &:hover {
-      font-weight: bolder;
+      //font-weight: bolder;
       //background-color: var(--color_7);
-      //color: white;
+      color: white;
     }
     img {
       &:hover {

@@ -58,7 +58,7 @@ export default function Nav() {
           <p className="made-by">
           &copy; Sebastián H. Alcántara {new Date().getFullYear()}
           <br/>
-          Diseñado por <span style={{fontWeight: "bold", color: "dimgrey"}}>Sebastián Alcántara</span>
+          Designed by <span style={{fontWeight: "bold", color: "dimgrey"}}>Sebastián Alcántara</span>
           </p>
         </div>
     </FooterStyles>

@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
 import Typewriter from "../components/Typewriter";
 
@@ -36,6 +35,33 @@ const HomePageStyles = styled.div`
     margin-bottom: 2rem;
   }
 
+  .section-scroll-button {
+    background-color: transparent; /* Green */
+    border: none;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    outline: none;
+    box-shadow: none;
+    margin: 0 auto;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .second-section {
+    height: 100vh;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
   @media (max-width: 800px) {
     width: 90%;
   }
@@ -48,7 +74,7 @@ export default function Home({ data }) {
   return (
     <>
       <HomePageStyles>
-        <div className="first-impression">
+        <section className="first-impression">
           <Bounce left>
             <div className="greeting-name">
               <h1 className="page-title">{greeting}</h1>
@@ -59,14 +85,19 @@ export default function Home({ data }) {
             <Typewriter />
           </Bounce>
           <Bounce up>
-            <div>
+            <button className="section-scroll-button">
               &#8595;
-            </div>
+            </button>
           </Bounce>
-        </div>
-        <div style={{width: "50vw"}}>
-          <StaticImage src="../images/web-developer-doge.jpg" alt="A web dev Doge" />
-        </div>
+        </section>
+        <section className="second-section">
+          <div style={{width: "50vw"}}>
+            <StaticImage src="../images/web-developer-doge.jpg" alt="A web dev Doge" />
+          </div>
+            <button className="section-scroll-button">
+              &#8595;
+            </button>
+        </section>
         <Link to="/blog">Este es mi blog</Link>
       </HomePageStyles>
     </>
