@@ -3,6 +3,7 @@ layout: post
 author: "Sebastián Héctor Alcántara"
 title:  "Welcome to Ubi Snippets!"
 date:   2019-09-01
+icon: "☕️"
 categories: blog
 keywords:
   - blog

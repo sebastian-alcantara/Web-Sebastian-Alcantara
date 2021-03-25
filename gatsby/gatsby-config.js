@@ -3,11 +3,13 @@ module.exports = {
     title: "Sebastian Alcantara",
     author: "Sebastián Alcántara",
     greeting: "Hi, I'm",
-    description: "Web developer"
+    description: "Web developer",
+    twitter: "https://twitter.com/UbiSeba",
   },
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
+    "gatsby-plugin-dark-mode",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -93,6 +95,7 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          "gatsby-remark-reading-time",
         ],
       },
     },

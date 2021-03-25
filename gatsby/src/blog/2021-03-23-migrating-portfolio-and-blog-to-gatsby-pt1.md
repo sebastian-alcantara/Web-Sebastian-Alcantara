@@ -3,6 +3,7 @@ layout: post
 author: "Sebastián Héctor Alcántara"
 title: "Migrating portfolio and blog to GatsbyJS - Part 1"
 date: 2021-03-23
+icon: "☕️"
 categories: blog
 keywords:
   - blog

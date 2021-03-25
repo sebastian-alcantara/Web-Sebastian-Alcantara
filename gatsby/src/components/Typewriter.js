@@ -46,8 +46,8 @@ export default function Typewriter() {
 
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 100 : subIndex === words[index].length ? 1000 :
-                150, parseInt(Math.random() * 350)));
+    }, Math.max(reverse ? 60 : subIndex === words[index].length ? 1000 :
+                100, parseInt(Math.random() * 200)));
 
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse]);

@@ -3,6 +3,7 @@ layout: post
 author: "Sebastián Héctor Alcántara"
 title:  "Sending AJAX GET requests to a Django server without jQuery"
 date:   2019-09-01
+icon: "☕️"
 categories: blog
 keywords:
   - django

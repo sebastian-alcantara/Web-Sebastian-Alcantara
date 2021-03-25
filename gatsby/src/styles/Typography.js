@@ -14,15 +14,21 @@ const Typography = createGlobalStyle`
     src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   }
 
-  html {
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  @font-face {
+    font-family: 'Merriweather', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+  }
+
+  body {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     //color: black;
-    color: var(--color_negro_1);
+    color: var(--textNormal);
   }
   p, li {
     letter-spacing: 0.5px;
   }
   p {
+    font-family: Merriweather, serif, Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.5rem;
   }
   .cita {
@@ -33,7 +39,7 @@ const Typography = createGlobalStyle`
     margin: 0;
   }
   a {
-    color: black;
+    color: var(--textLink);
     text-decoration-color: var(--color_5);
     /* Chrome renders this weird with this font, so we turn it off */
     text-decoration-skip-ink: none;

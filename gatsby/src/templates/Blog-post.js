@@ -12,9 +12,13 @@ const PostStyles = styled.div`
 
   .post-title {
     margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-size: 5rem;
     font-weight: bold;
+  }
+
+  .text-container {
+    padding-top: 2rem;
   }
 
   .gatsby-highlight {
@@ -47,6 +51,10 @@ const PostStyles = styled.div`
     text-decoration: underline;
   }
 
+  p {
+    font-size: 2.3rem;
+  }
+
 `;
 
 export default function BlogPost({ data }) {
@@ -56,8 +64,8 @@ export default function BlogPost({ data }) {
     <>
       <PostStyles>
         <div className="post-title">{post.frontmatter.title}</div>
-        <h4>{post.frontmatter.date}</h4>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <small>{post.frontmatter.date} · <span role="img" aria-label="Coffee">{post.frontmatter.icon}</span> {post.fields.readingTime.text}</small>
+        <div className="text-container" dangerouslySetInnerHTML={{ __html: post.html }} />
       </PostStyles>
     </>
   );
@@ -69,7 +77,13 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(fromNow: true)
+        date(formatString: "MMMM Do, YYYY")
+        icon
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }

@@ -3,6 +3,7 @@ layout: post
 author: "Sebastián Héctor Alcántara"
 title:  "Smooth scroll"
 date:   2019-10-23
+icon: "☕️"
 categories: blog
 keywords:
   - smooth scroll

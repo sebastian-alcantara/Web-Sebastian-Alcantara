@@ -33,6 +33,46 @@ const GlobalStyles = createGlobalStyle`
     font-size: 2rem;
   }
 
+  body {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: #222;
+  --hr: hsla(0, 0%, 0%, 0.2);
+
+  --header-color: orange;
+
+  --cardColor: #fff0d4;
+  --cardColorHover: #ffe5b5;
+  --cardBoxShadow: 0 7px 30px -10px #c9c9c9;
+
+  background-color: var(--bg);
+
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+
+  }
+
+  body.dark {
+    -webkit-font-smoothing: antialiased;
+
+    --bg: #1d3030;
+    --textNormal: rgba(255, 255, 255, 0.88);
+    --textTitle: white;
+    --textLink: rgba(255, 255, 255, 0.88);
+    --hr: hsla(0, 0%, 100%, 0.2);
+
+    --header-color: black;
+
+    --cardColor: #132020;
+    --cardColorHover: #172626;
+    --cardBoxShadow: none;
+
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
+  }
+
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
@@ -61,19 +101,20 @@ const GlobalStyles = createGlobalStyle`
 
   /* Scrollbar Styles */
   body::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
   }
+
   html {
     scrollbar-width: thin;
-    scrollbar-color: orange orange;
+    scrollbar-color: var(--textNormal) var(--bg);
   }
+
   body::-webkit-scrollbar-track {
-    background: whitesmoke;
+    background: var(--bg);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: orange;
+    background-color: var(--cardColor);
     border-radius: 6px;
-    border: 3px solid whitesmoke;
   }
 
   hr {

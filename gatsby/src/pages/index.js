@@ -100,9 +100,9 @@ export default function Home({ data }) {
           <div style={{width: "50vw"}}>
             <StaticImage src="../images/web-developer-doge.jpg" alt="A web dev Doge" />
           </div>
-            <button className="section-scroll-button" onClick={handleNextClick}>
-              &#8595;
-            </button>
+          <button className="section-scroll-button" onClick={handleNextClick}>
+            &#8595;
+          </button>
         </section>
         <Link to="/blog">Este es mi blog</Link>
       </HomePageStyles>

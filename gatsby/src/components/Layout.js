@@ -12,7 +12,7 @@ const SiteBorderStyles = styled.div`
 `;
 
 const ContentStyles = styled.div`
-  background: white;
+  //background: white;
   padding: 0;
   margin: 0;
   /*

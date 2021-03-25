@@ -21,13 +21,13 @@ const BlogPageStyles = styled.div`
   }
 
   .article-card {
-    background: #fff0d4;
+    background: var(--cardColor);
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 7px 30px -10px #c9c9c9;
+    box-shadow: var(--cardBoxShadow);
 
     :hover {
-      background-color: #ffe5b5;
+      background-color: var(--cardColorHover);
     }
   }
 
@@ -54,7 +54,7 @@ export default function Blog({ data }) {
                   <Link to={`/blog${post.fields.slug}`} >
                     <h2>{post.frontmatter.title}</h2>
                   </Link>
-                  <small>{post.frontmatter.author}, {post.frontmatter.date}</small>
+                  <small>{post.frontmatter.date} · <span role="img" aria-label="Coffee">{post.frontmatter.icon}</span> {post.fields.readingTime.text}</small>
                   <p>{post.excerpt}</p>
                 </div>
               </article>
@@ -71,14 +71,18 @@ export const pageQuery = graphql`
     blog: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       posts: nodes {
         frontmatter {
-          date(fromNow: true)
+          date(formatString: "MMMM Do, YYYY")
           title
           author
+          icon
         }
         excerpt(pruneLength: 300)
         id
         fields {
           slug
+          readingTime {
+            text
+          }
         }
       }
     }
