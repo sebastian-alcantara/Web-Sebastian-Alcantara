@@ -5,11 +5,11 @@ module.exports = {
     greeting: "Hi, I'm",
     description: "Web developer",
     twitter: "https://twitter.com/UbiSeba",
+    siteUrl: "https://sebastianalcantara.com.ar/",
   },
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    "gatsby-plugin-dark-mode",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
     //"gatsby-transformer-remark",
@@ -105,7 +105,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },

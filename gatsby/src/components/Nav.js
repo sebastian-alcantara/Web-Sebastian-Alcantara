@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import nav_shape from '../images/nav_shape.svg';
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
+import sun from '../assets/images/sun.svg';
+import moon from '../assets/images/moon.svg';
+import ThemeToggler from '../components/ThemeToggler';
 
 const NavStyles = styled.nav`
   //margin-bottom: 3rem;
@@ -16,16 +17,6 @@ const NavStyles = styled.nav`
   height: 10rem;
   //background-image: linear-gradient(#ff9d2f, #ff6126);
 
-/*
-  .shape_container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(${nav_shape});
-    background-size: 100% 100%;
-  }
-*/
   .nav-svg {
     position: absolute;
     bottom: 0;
@@ -66,7 +57,7 @@ const NavStyles = styled.nav`
     text-shadow: none;
     outline:none;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     display: block;
     //width: 15rem;
@@ -111,7 +102,7 @@ const NavStyles = styled.nav`
   .switch {
     position: relative;
     display: inline-block;
-    width: 30px;
+    width: 36px;
     height: 17px;
   }
 
@@ -138,12 +129,18 @@ const NavStyles = styled.nav`
 
   .slider:before {
     position: absolute;
-    content: "🌞";
+    //content: "🌞";
+    
+    display: block;
+    content: " ";
+    background-image: url(${sun});
+    background-size: 22px 22px;
+    height: 22px;
+    width: 22px;
+
     font-size: 20px;
-    //height: 13px;
-    //width: 13px;
-    left: -4px;
-    top: -3px;
+    left: -2px;
+    top: -2px;
     //background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -159,10 +156,18 @@ const NavStyles = styled.nav`
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
-    content: "🌙";
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+    //content: "🌙";
+
+    display: block;
+    content: " ";
+    background-image: url(${moon});
+    background-size: 22px 22px;
+    height: 22px;
+    width: 22px;
+
   }
 
 `;
@@ -186,16 +191,20 @@ export default function Nav() {
       </ul>
       <div className="toggler-container">
         <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <label className="switch">
-              <input
-                type="checkbox"
-                onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                checked={theme === 'dark'}
-              /><span className="slider"></span>
-            </label>
-            )
-          }
+          {({ theme, toggleTheme }) => {
+            if (theme == null) {
+              return null
+            }
+            return (
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  checked={theme === 'dark'}
+                /><span className="slider"></span>
+              </label>
+            );
+          }}
         </ThemeToggler>
       </div>
     </NavStyles>

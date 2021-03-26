@@ -19,6 +19,7 @@ const PostStyles = styled.div`
 
   .text-container {
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .gatsby-highlight {

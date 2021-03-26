@@ -11,6 +11,8 @@ const BlogPageStyles = styled.div`
   .page-title {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-size: 5rem;
+    font-weight: bold;
   }
 
   .posts-grid {

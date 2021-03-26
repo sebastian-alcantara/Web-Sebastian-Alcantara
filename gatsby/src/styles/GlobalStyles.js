@@ -22,6 +22,23 @@ const GlobalStyles = createGlobalStyle`
     font-size: 8px;
     scroll-behavior: smooth;
 
+    --bg: white;
+    --textNormal: #222;
+    --textTitle: #222;
+    --textLink: #222;
+    --hr: hsla(0, 0%, 0%, 0.2);
+
+    --header-color: orange;
+
+    --cardColor: #fff0d4;
+    --cardColorHover: #ffe5b5;
+    --cardBoxShadow: 0 7px 30px -10px #c9c9c9;
+
+    background-color: var(--bg);
+
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
     @media (prefers-reduced-motion: reduce) {
       html {
           scroll-behavior: auto;
@@ -29,31 +46,7 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  body {
-    font-size: 2rem;
-  }
-
-  body {
-  --bg: white;
-  --textNormal: #222;
-  --textTitle: #222;
-  --textLink: #222;
-  --hr: hsla(0, 0%, 0%, 0.2);
-
-  --header-color: orange;
-
-  --cardColor: #fff0d4;
-  --cardColorHover: #ffe5b5;
-  --cardBoxShadow: 0 7px 30px -10px #c9c9c9;
-
-  background-color: var(--bg);
-
-  transition-duration: 0.3s;
-  transition-timing-function: linear;
-
-  }
-
-  body.dark {
+  html.dark {
     -webkit-font-smoothing: antialiased;
 
     --bg: #1d3030;
@@ -71,6 +64,11 @@ const GlobalStyles = createGlobalStyle`
     transition-duration: 0.3s;
     transition-timing-function: linear;
 
+  }
+
+
+  body {
+    font-size: 2rem;
   }
 
   fieldset {
@@ -106,7 +104,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--textNormal) var(--bg);
+    scrollbar-color: var(--cardColor) var(--bg);
   }
 
   body::-webkit-scrollbar-track {
