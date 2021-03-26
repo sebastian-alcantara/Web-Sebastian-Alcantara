@@ -6,6 +6,8 @@ import { createGlobalStyle } from 'styled-components';
 //import font from '../assets/fonts/Alegreya-Regular.woff';
 //import font_bold from '../assets/fonts/Alegreya-Bold.woff';
 //import font_italic from '../assets/fonts/Alegreya-Italic.woff';
+import font from '../assets/fonts/Merriweather-Regular.ttf';
+
 
 
 const Typography = createGlobalStyle`
@@ -16,7 +18,7 @@ const Typography = createGlobalStyle`
 
   @font-face {
     font-family: 'Merriweather', serif;
-    src: url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    src: url(${font});;
   }
 
   body {

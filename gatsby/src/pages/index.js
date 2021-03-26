@@ -82,6 +82,8 @@ export default function Home({ data }) {
   const firstSectionRef = useRef();
   const secondSectionRef = useRef();
 
+  const projectEdges = data.projects.edges;
+  console.log(projectEdges);
   function handleNextClick() {
     secondSectionRef.current.scrollIntoView({ behavior: "smooth" })
   }
@@ -112,8 +114,14 @@ export default function Home({ data }) {
           </Bounce>
         </section>
         <section className="second-section" ref={secondSectionRef}>
-          <div style={{width: "50vw"}}>
-            <StaticImage src="../assets/images/web-developer-doge.jpg" alt="A web dev Doge" />
+          <div classname="project-grid">
+            {projectEdges.map((edge) => {
+              return(
+                <div className="project-card">
+                  <p>{edge.node.title}</p>
+                </div>
+              );
+            })}
           </div>
           <button className="section-scroll-button" onClick={handleNextClick}>
             &#8595;
@@ -132,6 +140,44 @@ export const pageQuery = graphql`
         title
         greeting
         description
+      }
+    }
+    projects: allSanityProject(
+      limit: 6
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+    ) {
+      edges {
+        node {
+          id
+          mainImage {
+            crop {
+              _key
+              _type
+              top
+              bottom
+              left
+              right
+            }
+            hotspot {
+              _key
+              _type
+              x
+              y
+              height
+              width
+            }
+            asset {
+              _id
+            }
+            alt
+          }
+          title
+          _rawExcerpt
+          slug {
+            current
+          }
+        }
       }
     }
   }
