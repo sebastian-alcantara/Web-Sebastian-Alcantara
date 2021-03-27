@@ -12,7 +12,7 @@ import project from './documents/project'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
-import figure from './objects/figure'
+//import figure from './objects/figure'
 import projectMember from './objects/projectMember'
 import projectPortableText from './objects/projectPortableText'
 import simplePortableText from './objects/simplePortableText'
@@ -27,7 +27,7 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     bioPortableText,
-    figure,
+    //figure,
     projectMember,
     projectPortableText,
     simplePortableText,

@@ -56,7 +56,7 @@ const FooterStyles = styled.nav`
   }
 `;
 
-export default function Nav({ data }) {
+export default function Footer({ data }) {
   return (
     <StaticQuery 
       query = {graphql`

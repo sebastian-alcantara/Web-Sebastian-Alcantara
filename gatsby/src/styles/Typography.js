@@ -30,7 +30,7 @@ const Typography = createGlobalStyle`
     letter-spacing: 0.5px;
   }
   p {
-    font-family: Merriweather, serif, Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Merriweather, Georgia, serif, Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.5rem;
   }
   .cita {

@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+//import {format} from 'date-fns'
 
 export default {
   name: 'project',
@@ -50,7 +50,11 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'figure'
+      //type: 'figure',
+      type: 'image',
+      options: {
+        hotspot: true
+      },
     },
     {
       name: 'categories',

@@ -35,6 +35,12 @@ export default {
                 title: 'URL',
                 name: 'href',
                 type: 'url'
+              },
+              {
+                title: "Open in new tab",
+                name: "blank",
+                description: "This opens the link in a new tab.",
+                type: "boolean"
               }
             ]
           }
@@ -44,8 +50,10 @@ export default {
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
+    /*
     {
       type: 'figure'
     }
+    */
   ]
 }

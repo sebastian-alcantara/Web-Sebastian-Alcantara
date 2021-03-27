@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import { graphql, Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 import styled from "styled-components";
 import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
 import Typewriter from "../components/Typewriter";
+import ProjectCard from "../components/ProjectCard";
 
 const HomePageStyles = styled.div`
   max-width: 800px;
@@ -60,7 +61,6 @@ const HomePageStyles = styled.div`
   }
 
   .second-section {
-    height: 100vh;
     margin: 0 auto;
     
     display: grid;
@@ -70,6 +70,13 @@ const HomePageStyles = styled.div`
     text-align: center;
   }
 
+  .project-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    padding-top: 2rem;
+  }
 
   @media (max-width: 800px) {
     width: 90%;
@@ -114,25 +121,59 @@ export default function Home({ data }) {
           </Bounce>
         </section>
         <section className="second-section" ref={secondSectionRef}>
-          <div classname="project-grid">
+          <div className="project-grid">
             {projectEdges.map((edge) => {
               return(
-                <div className="project-card">
-                  <p>{edge.node.title}</p>
-                </div>
+                <Fade left key={`fade-${edge.node._id}`}>
+                  <ProjectCard
+                    project={edge.node}
+                    key={edge.node._id}
+                  />
+                </Fade>
               );
             })}
           </div>
-          <button className="section-scroll-button" onClick={handleNextClick}>
-            &#8595;
-          </button>
         </section>
-        <Link to="/blog">Este es mi blog</Link>
       </HomePageStyles>
     </>
   );
 };
 
+export const pageQuery = graphql`
+  query MetadataQuery {
+    site {
+      siteMetadata {
+        title
+        greeting
+        description
+      }
+    }
+    projects: allSanityProject(
+      limit: 6
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+    ) {
+      edges {
+        node {
+          id
+          _rawExcerpt
+          _rawBody
+          mainImage {
+            asset {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+          }
+          title
+          slug {
+            current
+          }
+        }
+      }
+    }
+  }
+`;
+
+/*
 export const pageQuery = graphql`
   query MetadataQuery {
     site {
@@ -174,6 +215,8 @@ export const pageQuery = graphql`
           }
           title
           _rawExcerpt
+          body
+          excerpt
           slug {
             current
           }
@@ -182,3 +225,4 @@ export const pageQuery = graphql`
     }
   }
 `;
+*/

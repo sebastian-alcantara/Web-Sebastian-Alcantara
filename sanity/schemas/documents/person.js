@@ -24,7 +24,10 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'figure'
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: 'bio',
