@@ -92,7 +92,7 @@ const NavStyles = styled.nav`
     }
   }
 
-.toggler-container {
+  .toggler-container {
     position: absolute;
     right: 20px;
     top: 10px;

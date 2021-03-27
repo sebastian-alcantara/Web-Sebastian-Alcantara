@@ -34,6 +34,9 @@ const GlobalStyles = createGlobalStyle`
     --cardColorHover: #ffe5b5;
     --cardBoxShadow: 0 7px 30px -10px #c9c9c9;
 
+    --social-link-color: black;
+    --social-link-color-hover: orange;
+
     background-color: var(--bg);
 
     transition-duration: 0.3s;
@@ -60,6 +63,9 @@ const GlobalStyles = createGlobalStyle`
     --cardColor: #132020;
     --cardColorHover: #172626;
     --cardBoxShadow: none;
+
+    --social-link-color: white;
+    --social-link-color-hover: orange;
 
     transition-duration: 0.3s;
     transition-timing-function: linear;

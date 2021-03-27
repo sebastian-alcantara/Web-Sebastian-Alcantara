@@ -78,6 +78,7 @@ export default function Footer({ data }) {
             Designed with <span role="img" aria-label="love">❤️</span> by <span style={{fontWeight: "bold", color: "dimgrey"}}><a
               href={data.site.siteMetadata.twitter}
               target="_blank"
+              rel="noopener noreferrer"
               >Sebastián Alcántara</a></span>
             </h4>
           </div>

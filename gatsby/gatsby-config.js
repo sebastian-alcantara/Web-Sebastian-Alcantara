@@ -8,7 +8,9 @@ module.exports = {
     author: "Sebastián Alcántara",
     greeting: "Hi, I'm",
     description: "Web developer",
+    github: "https://github.com/sebastian-alcantara",
     twitter: "https://twitter.com/UbiSeba",
+    email: "sebastian.h.alcantara@gmail.com",
     siteUrl: "https://sebastianalcantara.com.ar/",
   },
   plugins: [

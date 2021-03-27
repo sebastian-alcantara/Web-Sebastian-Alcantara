@@ -5,6 +5,7 @@ import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import Typewriter from "../components/Typewriter";
 import ProjectCard from "../components/ProjectCard";
+import ContactLinks from "../components/ContactLinks";
 
 const HomePageStyles = styled.div`
   max-width: 800px;
@@ -85,7 +86,7 @@ const HomePageStyles = styled.div`
 `;
 
 export default function Home({ data }) {
-  const { title, description, greeting } = data.site.siteMetadata;
+  const { title, greeting } = data.site.siteMetadata;
   const firstSectionRef = useRef();
   const secondSectionRef = useRef();
 
@@ -108,6 +109,9 @@ export default function Home({ data }) {
           <Bounce left>
             <Typewriter />
           </Bounce>
+          <Bounce left>
+            <ContactLinks />
+          </Bounce>
           <Bounce up>
             <button className="section-scroll-button" onClick={handleNextClick}>
             <svg className="svg-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.996 491.996">
@@ -124,10 +128,10 @@ export default function Home({ data }) {
           <div className="project-grid">
             {projectEdges.map((edge) => {
               return(
-                <Fade left key={`fade-${edge.node._id}`}>
+                <Fade left key={`fade-${edge.node.id}`}>
                   <ProjectCard
                     project={edge.node}
-                    key={edge.node._id}
+                    key={edge.node.id}
                   />
                 </Fade>
               );
