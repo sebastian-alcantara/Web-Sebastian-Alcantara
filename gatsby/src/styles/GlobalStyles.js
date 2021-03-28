@@ -39,6 +39,9 @@ const GlobalStyles = createGlobalStyle`
 
     --nav-link-underline: orangered;
 
+    --marker-color: black;
+    --marker-bg: orange;
+    
     background-color: var(--bg);
 
     transition-duration: 0.3s;
@@ -70,6 +73,9 @@ const GlobalStyles = createGlobalStyle`
     --social-link-color-hover: orange;
 
     --nav-link-underline: orangered;
+
+    --marker-color: grey;
+    --marker-bg: black;
 
     transition-duration: 0.3s;
     transition-timing-function: linear;
