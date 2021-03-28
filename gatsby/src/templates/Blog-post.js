@@ -60,7 +60,6 @@ const PostStyles = styled.div`
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark;
-
   return (
     <>
       <PostStyles>

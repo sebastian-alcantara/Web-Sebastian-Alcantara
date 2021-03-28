@@ -23,6 +23,10 @@ const ContentStyles = styled.div`
     width: 90%;
   }
   */
+
+  .current_nav_link {
+    background-color: green;
+  }
 `;
 
 export default function Layout({ children }) {

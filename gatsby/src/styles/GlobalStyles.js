@@ -37,6 +37,8 @@ const GlobalStyles = createGlobalStyle`
     --social-link-color: black;
     --social-link-color-hover: orange;
 
+    --nav-link-underline: orangered;
+
     background-color: var(--bg);
 
     transition-duration: 0.3s;
@@ -66,6 +68,8 @@ const GlobalStyles = createGlobalStyle`
 
     --social-link-color: white;
     --social-link-color-hover: orange;
+
+    --nav-link-underline: orangered;
 
     transition-duration: 0.3s;
     transition-timing-function: linear;

@@ -8,6 +8,7 @@ const ContactLinksStyles = styled.div`
   grid-template-columns: auto auto auto;
   column-gap: 5px;
   justify-items: center;
+  max-width: 300px;
 
   .svg-icon-container {
     width: 36px;

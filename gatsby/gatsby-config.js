@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Sebastian Alcantara",
+    title: "Sebastián Alcántara",
     author: "Sebastián Alcántara",
     greeting: "Hi, I'm",
     description: "Web developer",
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/assets/images/icon.png",
+        icon: "static/favicon.svg",
       },
     },
     //"gatsby-transformer-remark",

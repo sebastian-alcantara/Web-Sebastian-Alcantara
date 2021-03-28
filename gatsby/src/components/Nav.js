@@ -32,17 +32,18 @@ const NavStyles = styled.nav`
 
   .menu-ul {
     z-index: 10;
-    margin: 0 auto;
+    //margin: 0 auto;
+    margin-top: 0;
     padding: 0;
     text-align: center;
     list-style: none;
     width: 70%;
     display: grid;
     //grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 80px 80px 80px;
 
     grid-template-rows: auto;
-    gap: 10rem;
+    gap: 10px;
 
     //margin-top: -6rem;
 
@@ -62,7 +63,8 @@ const NavStyles = styled.nav`
     display: block;
     //width: 15rem;
     background-color: transparent;
-    line-height: 6rem;
+    line-height: 2em;
+    width: 80px;
     -webkit-tap-highlight-color: transparent;
     //padding-top: 1rem;
     //padding-bottom: 1rem;
@@ -78,6 +80,10 @@ const NavStyles = styled.nav`
         transform: scale(1.1, 1.1);
       }
     }
+  }
+
+  .active-link {
+    border-bottom: 5px solid var(--nav-link-underline);
   }
 
   @media (max-width: 800px) {
@@ -180,13 +186,30 @@ export default function Nav() {
       </svg>
       <ul className="menu-ul">
         <li>
-          <Link to="/">Home</Link>
+          <Link
+          to="/" 
+          activeClassName="active-link"
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <Link
+          to="/blog"
+          activeClassName="active-link"
+          partiallyActive={true}
+          >
+            Blog
+          </Link>
         </li>
         <li>
-          <Link to="/contacto">Contact</Link>
+          <Link
+          to="/about"
+          activeClassName="active-link"
+          className="blog-link"
+          >
+            About
+          </Link>
         </li>
       </ul>
       <div className="toggler-container">

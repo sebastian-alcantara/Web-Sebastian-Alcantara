@@ -23,6 +23,8 @@ const HomePageStyles = styled.div`
 
     .greeting-name {
       align-self: end;
+      font-size: 5rem;
+      font-weight: bold;
     }
 
     p {
@@ -35,6 +37,15 @@ const HomePageStyles = styled.div`
   .page-title {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .typewriter-container {
+    justify-self: center;
+    width: 400px;
+    background-color: var(--cardColor);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .section-scroll-button {
@@ -50,6 +61,7 @@ const HomePageStyles = styled.div`
     margin: 0 auto;
     width: 4rem;
     height: 4rem;
+    align-self: start;
   }
 
   .svg-arrow {
@@ -81,6 +93,18 @@ const HomePageStyles = styled.div`
 
   @media (max-width: 800px) {
     width: 90%;
+
+    .first-impression {
+      .greeting-name {
+        align-self: end;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+    }
+
+    .typewriter-container {
+      width: 80%;
+    }
   }
 
 `;
@@ -107,7 +131,9 @@ export default function Home({ data }) {
             </div>
           </Bounce>
           <Bounce left>
-            <Typewriter />
+            <div className="typewriter-container">
+              <Typewriter />
+            </div>
           </Bounce>
           <Bounce left>
             <ContactLinks />
