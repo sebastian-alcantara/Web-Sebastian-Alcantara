@@ -69,6 +69,7 @@ export default function About() {
   `;
   return (
     <>
+      <SEO title="About me" />
       <AboutStyles>
         <h1>Hi there!</h1>
         <p>
