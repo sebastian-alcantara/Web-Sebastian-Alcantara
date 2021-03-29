@@ -7,11 +7,12 @@ module.exports = {
     title: "Sebastián Alcántara",
     author: "Sebastián Alcántara",
     greeting: "Hi, I'm",
-    description: "Web developer",
+    description: "Sebastián Alcántara's portfolio and blog",
     github: "https://github.com/sebastian-alcantara",
     twitter: "https://twitter.com/UbiSeba",
     email: "sebastian.h.alcantara@gmail.com",
     siteUrl: "https://sebastianalcantara.com.ar/",
+    keywords: ["web developer", "fullstack", "programmer", "engineer", "web development"]
   },
   plugins: [
     "gatsby-plugin-styled-components",

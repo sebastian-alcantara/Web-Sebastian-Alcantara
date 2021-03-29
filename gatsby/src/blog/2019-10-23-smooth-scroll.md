@@ -1,8 +1,8 @@
 ---
 layout: post
 author: "Sebastián Héctor Alcántara"
-title:  "Smooth scroll"
-date:   2019-10-23
+title: "Smooth scroll"
+date: 2019-10-23
 icon: "☕️"
 categories: blog
 keywords:
@@ -55,6 +55,6 @@ html {
 
 ## Compatibility
 
-This CSS property is supported in Chrome, Firefox and Opera. As of the date of publication of this blog post, it is not supported  in Safari, Edge nor Internet Explorer.
+This CSS property is supported in Chrome, Firefox and Opera. As of the date of publication of this blog post, it is not supported in Safari, Edge nor Internet Explorer.
 
 Cheers, have a good one!

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SEO from "../components/SEO";
 
 export default function About() {
 

@@ -11,7 +11,7 @@ keywords:
 
 Hello!
 
-Lets say you want to send a `GET` request to a Django based server, and you want to use vanilla `JavaScript`. You don't want to use jQuery, nor any other framework.
+Let's say you want to send a `GET` request to a Django based server, and you want to use vanilla `JavaScript`. You don't want to use jQuery, nor any other framework.
 
 <!-- more -->
 
@@ -38,7 +38,7 @@ I use the `defer` attribute here to make sure the script is run after the page h
 
 ### The JavaScript:
 
-Next, lets write the **JavaScript** code to listen for the click and to send the `GET` request. Lets say we want to ask the server for the last name associated to the first name that was in the button and replace the text in said button with it:
+Next, lets write the **JavaScript** code to listen for the click and to send the `GET` request. Let's say we want to ask the server for the last name associated to the first name that was in the button and replace the text in said button with it:
 
 ```javascript
 document.querySelector('#test-button').onclick = () =>

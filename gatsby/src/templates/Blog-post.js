@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
+import SEO from "../components/SEO";
 
 const PostStyles = styled.div`
   max-width: 800px;
@@ -62,6 +63,7 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark;
   return (
     <>
+      <SEO title={post.frontmatter.title} />
       <PostStyles>
         <div className="post-title">{post.frontmatter.title}</div>
         <small>{post.frontmatter.date} · <span role="img" aria-label="Coffee">{post.frontmatter.icon}</span> {post.fields.readingTime.text}</small>

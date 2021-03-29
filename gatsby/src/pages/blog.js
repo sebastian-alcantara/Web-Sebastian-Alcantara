@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Fade from 'react-reveal/Fade';
+import SEO from "../components/SEO";
 
 const BlogPageStyles = styled.div`
   background-color: none;
@@ -44,6 +45,7 @@ export default function Blog({ data }) {
 
   return (
     <>
+      <SEO title="Blog" />
       <BlogPageStyles>
         <Fade bottom>
           <h1 className="page-title">Ubi Snippets - My Blog</h1>
