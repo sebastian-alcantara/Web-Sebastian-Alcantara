@@ -7,8 +7,16 @@ class ThemeToggler extends React.Component {
   }
 
   componentDidMount() {
+    var theme_color = "";
     window.__onThemeChange = () => {
       this.setState({ theme: window.__theme })
+
+      if(localStorage.theme !== "dark") {
+        theme_color = "#000000";
+      } else {
+        theme_color = "#fff0d4";
+      }
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", theme_color);
     }
   }
 
