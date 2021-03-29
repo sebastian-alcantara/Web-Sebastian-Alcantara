@@ -52,12 +52,14 @@ module.exports = {
         theme_color_in_head: false,
       },
     },
+    /*
     {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/`,`/about/`,`/blog/`, `/blog/*`],
       },
     },
+    */
     //"gatsby-transformer-remark",
     {
       resolve: `gatsby-transformer-remark`,
