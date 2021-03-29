@@ -7,6 +7,7 @@ import Typewriter from "../components/Typewriter";
 import ProjectCard from "../components/ProjectCard";
 import ContactLinks from "../components/ContactLinks";
 import SEO from "../components/SEO";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const HomePageStyles = styled.div`
   max-width: 800px;
@@ -116,14 +117,15 @@ export default function Home({ data }) {
   const secondSectionRef = useRef();
 
   const projectEdges = data.projects.edges;
-  console.log(projectEdges);
   function handleNextClick() {
     secondSectionRef.current.scrollIntoView({ behavior: "smooth" })
   }
 
+  // To get the pic: <GatsbyImage image={data.person.image.asset.gatsbyImageData} alt={title}/>
+
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Home" image={data.person.image?.asset?.gatsbyImageData?.src} />
       <HomePageStyles>
         <section className="first-impression" ref={firstSectionRef}>
           <Bounce left>
@@ -172,7 +174,7 @@ export default function Home({ data }) {
 };
 
 export const pageQuery = graphql`
-  query MetadataQuery {
+  query HomeDataQuery {
     site {
       siteMetadata {
         title
@@ -199,6 +201,13 @@ export const pageQuery = graphql`
           slug {
             current
           }
+        }
+      }
+    }
+    person: sanityPerson(name: {eq: "Sebastián H. Alcántara"}) {
+      image {
+        asset {
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
     }
