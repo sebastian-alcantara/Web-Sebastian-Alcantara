@@ -46,7 +46,7 @@ module.exports = {
         short_name: "SHA",
         start_url: "/",
         background_color: `#000000`,
-        icon: "static/favicon.png",
+        icon: "static/favicon.svg",
         display: "standalone",
         theme_color: "#000000",
         theme_color_in_head: false,
