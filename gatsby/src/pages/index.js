@@ -7,7 +7,7 @@ import Typewriter from "../components/Typewriter";
 import ProjectCard from "../components/ProjectCard";
 import ContactLinks from "../components/ContactLinks";
 import SEO from "../components/SEO";
-import { GatsbyImage } from "gatsby-plugin-image";
+//import { GatsbyImage } from "gatsby-plugin-image";
 
 const HomePageStyles = styled.div`
   max-width: 800px;
