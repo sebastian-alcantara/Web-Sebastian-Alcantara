@@ -86,18 +86,6 @@ const NavStyles = styled.nav`
     border-bottom: 5px solid var(--nav-link-underline);
   }
 
-  @media (max-width: 800px) {
-    .menu-ul {
-      width: 100%;
-      grid-gap: 0;
-    }
-
-    a, button {
-      width: 9.5rem;
-      font-size: 2rem;
-    }
-  }
-
   .toggler-container {
     position: absolute;
     right: 20px;
@@ -176,6 +164,23 @@ const NavStyles = styled.nav`
 
   }
 
+  @media (max-width: 800px) {
+    .menu-ul {
+      width: 100%;
+      grid-gap: 0;
+      position: absolute;
+      left: 10px;
+    }
+
+    a, button {
+      width: 9.5rem;
+      font-size: 2rem;
+    }
+
+    .toggler-container {
+      top: 10px;
+    }
+  }
 `;
 
 export default function Nav() {

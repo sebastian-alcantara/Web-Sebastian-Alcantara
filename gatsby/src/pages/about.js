@@ -39,7 +39,7 @@ export default function About() {
 
       li {
         font-family: Merriweather, Georgia, serif, Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-left: 2rem;
         list-style: none;
         padding-top: 2rem;
