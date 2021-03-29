@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 export default function SEO({ children, location, description, title, image }) {
-  const { site, person } = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -11,13 +11,6 @@ export default function SEO({ children, location, description, title, image }) {
           description
           author
           keywords
-        }
-      }
-      person: sanityPerson(name: {eq: "Sebastián H. Alcántara"}) {
-        image {
-          asset {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
         }
       }
     }
@@ -47,7 +40,7 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="keywords" content={site.siteMetadata.keywords.join(",")} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={person.image.asset.gatsbyImageData} />
+      <meta property="og:image" content="/sha.jfif" />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         propery="og:site_name"
