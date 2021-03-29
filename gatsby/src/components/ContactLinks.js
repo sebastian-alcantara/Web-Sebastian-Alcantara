@@ -51,7 +51,7 @@ export default function ContactLinks() {
       render={data => (
         <ContactLinksStyles>
           <div className="svg-icon-container">
-            <a href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer">
+            <a href={data.site.siteMetadata.github} target="_blank" rel="noopener noreferrer" name="link-to-github">
               <svg className="svg-icon" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512" preserveAspectRatio="none">
                 <path d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872
@@ -67,7 +67,7 @@ export default function ContactLinks() {
             </a>
           </div>
           <div className="svg-icon-container">
-            <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer">
+            <a href={data.site.siteMetadata.twitter} target="_blank" rel="noopener noreferrer" name="link-to-twitter">
               <svg className="svg-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="none">
                 <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
                 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
@@ -81,7 +81,7 @@ export default function ContactLinks() {
             </a>
           </div>
           <div className="svg-icon-container">
-            <a href={`mailto:${data.site.siteMetadata.email}`} target="_blank" rel="noopener noreferrer">
+            <a href={`mailto:${data.site.siteMetadata.email}`} target="_blank" rel="noopener noreferrer" name="link-to-email">
               <svg className="svg-icon" viewBox="0 0 511.996 511.996" xmlns="http://www.w3.org/2000/svg">
                 <path d="m230.9 253.371c13.369 8.913 36.827 8.914 50.199-.001.002-.001.005-.003.007-.004l227.865-151.911c-7.474-21.616-28.018-37.188-52.142-37.188h-401.663c-24.125 0-44.668 15.572-52.143 37.188l227.87 151.912c.003.002.005.002.007.004z"/>
                 <path d="m297.746 278.328c-.003.002-.005.004-.007.005-11.702 7.801-26.724 11.702-41.741 11.702-15.02 0-30.036-3.9-41.739-11.703-.002-.001-.003-.002-.005-.003l-214.254-142.835v257.072c0 30.417 24.747 55.163 55.166 55.163h401.666c30.418 0 55.164-24.746 55.164-55.163v-257.072z"/>

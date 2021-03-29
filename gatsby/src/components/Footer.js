@@ -34,7 +34,7 @@ const FooterStyles = styled.nav`
     font-size: 1.5rem;
     padding-top: 5rem;
 
-    h4 {
+    p {
     margin-bottom: 0;
     }
 
@@ -74,13 +74,13 @@ export default function Footer({ data }) {
             <polygon points="0,50 0,100 100,100 100,0"/>
           </svg>
           <div className="footer-content">
-            <h4 className="made-by">
+            <p className="made-by">
             Designed with <span role="img" aria-label="love">❤️</span> by <span style={{fontWeight: "bold", color: "dimgrey"}}><a
               href={data.site.siteMetadata.twitter}
               target="_blank"
               rel="noopener noreferrer"
               >Sebastián Alcántara</a></span>
-            </h4>
+            </p>
           </div>
         </FooterStyles>
       )}
