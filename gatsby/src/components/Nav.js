@@ -12,7 +12,6 @@ const NavStyles = styled.nav`
   //background-color: var(--color_6);
   max-width:100%;
   //height: 6rem;
-
   position: relative;
   height: 10rem;
   //background-image: linear-gradient(#ff9d2f, #ff6126);
@@ -165,11 +164,16 @@ const NavStyles = styled.nav`
   }
 
   @media (max-width: 800px) {
+
+    justify-content: left;
+    padding-left: 10px;
+
     .menu-ul {
       width: 100%;
       grid-gap: 0;
-      position: absolute;
-      left: 10px;
+      //position: absolute;
+      //left: 0;
+      justify-self: start;
     }
 
     a, button {
@@ -178,7 +182,7 @@ const NavStyles = styled.nav`
     }
 
     .toggler-container {
-      top: 10px;
+      top: 8px;
     }
   }
 `;
